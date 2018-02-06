@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var finalScoreLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
+    
+    @IBAction func startGame(_ sender: UIButton) {
+        gameBegin()
+    }
     
     var counter = 0 {
         didSet {
@@ -29,16 +34,25 @@ class ViewController: UIViewController {
             timerLabel.text = "Time \(currentTime)"
             if currentTime <= 0 {
                 finalScoreLabel.text = "Final Score: \(self.counter)"
-                finalScoreLabel.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+                finalScoreLabel.isHidden = false
+                finalScoreLabel.backgroundColor = #colorLiteral(red: 0.2588235294, green: 0.5215686275, blue: 0.9568627451, alpha: 1)
                 finalScoreLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 gameTimer.invalidate()
+                startButton.isHidden = false
             }
         }
     }
     
+    func gameBegin(){
+        startButton.isHidden = true
+        counter = 0
+        currentTime = 20
+        finalScoreLabel.isHidden = true
+        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
         let scene = SCNScene()
         sceneView.scene = scene
     }
@@ -77,7 +91,7 @@ class ViewController: UIViewController {
             if let hitObject = hitlist.first {
                 let node = hitObject.node
                 
-                if node.name == "shipMesh", self.currentTime > 0 {
+                if node.name == "shipMesh", self.currentTime > 0, finalScoreLabel.isHidden == true {
                     counter += 1
                     node.removeFromParentNode()
                     addObject()
