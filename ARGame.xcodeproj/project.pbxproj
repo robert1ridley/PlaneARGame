@@ -13,6 +13,8 @@
 		9B6756FE20288C730002531A /* ARGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B6756FC20288C730002531A /* ARGame.xcdatamodeld */; };
 		9B67570020288C730002531A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6756FF20288C730002531A /* Assets.xcassets */; };
 		9B67570320288C730002531A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B67570120288C730002531A /* LaunchScreen.storyboard */; };
+		9B67570B202897620002531A /* Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67570A202897620002531A /* Spaceship.swift */; };
+		9B67572D2028981E0002531A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B67572C2028981E0002531A /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9B6756FF20288C730002531A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B67570220288C730002531A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B67570420288C730002531A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B67570A202897620002531A /* Spaceship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaceship.swift; sourceTree = "<group>"; };
+		9B67572C2028981E0002531A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				9B6756F520288C730002531A /* AppDelegate.swift */,
 				9B6756F720288C730002531A /* ViewController.swift */,
+				9B67570A202897620002531A /* Spaceship.swift */,
 				9B6756F920288C730002531A /* Main.storyboard */,
 				9B6756FF20288C730002531A /* Assets.xcassets */,
+				9B67572C2028981E0002531A /* art.scnassets */,
 				9B67570120288C730002531A /* LaunchScreen.storyboard */,
 				9B67570420288C730002531A /* Info.plist */,
 				9B6756FC20288C730002531A /* ARGame.xcdatamodeld */,
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B67570320288C730002531A /* LaunchScreen.storyboard in Resources */,
+				9B67572D2028981E0002531A /* art.scnassets in Resources */,
 				9B67570020288C730002531A /* Assets.xcassets in Resources */,
 				9B6756FB20288C730002531A /* Main.storyboard in Resources */,
 			);
@@ -141,6 +148,7 @@
 			files = (
 				9B6756F820288C730002531A /* ViewController.swift in Sources */,
 				9B6756F620288C730002531A /* AppDelegate.swift in Sources */,
+				9B67570B202897620002531A /* Spaceship.swift in Sources */,
 				9B6756FE20288C730002531A /* ARGame.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
